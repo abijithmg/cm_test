@@ -25,15 +25,15 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'hungrypy@gmail.com' 
+EMAIL_HOST_USER = 'example@gmail.com' 
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'Python ecommerce <hungrypy@gmail.com>'
+DEFAULT_FROM_EMAIL = 'Python ecommerce <example@gmail.com>'
 
 
 MANAGERS = (
-    ('Justin Mitchel', "hungrypy@gmail.com"),
+    ('Soumya', "example@gmail.com"),
 )
 
 ADMINS = MANAGERS
@@ -43,7 +43,7 @@ ADMINS = MANAGERS
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.pythonecommerce.com']
+ALLOWED_HOSTS = ['.herokuapp.com','*']
 
 
 # Application definition
