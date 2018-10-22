@@ -1,0 +1,33 @@
+{% extends 'mentoring_base.html' %}
+
+{% block content %}
+<h2>Mentor List</h2>
+<a href="{% url 'mentoring:mentor_new' %}">New Mentor entry</a>
+<ul>
+  {% for mentor in mentors %}
+  <li><p>Mentor ID: <a href="{% url 'mentoring:mentor_edit' mentor.id %}">{{ mentor.id }}</a></p>
+  <p>Name: {{ mentor.name }}</p>
+    <p>Expertise: {{ mentor.expertise }}</p>
+    <a href="{% url 'mentoring:mentor_delete' mentor.id %}">Delete</a>
+  </li>
+  {% endfor %}
+</ul>
+
+<br>
+<h2>Student List</h2>
+<a href="{% url 'mentoring:student_new' %}">New Student entry</a>
+<ul>
+  {% for student in students %}
+  <li><p>Student ID: <a href="{% url 'mentoring:student_edit' student.id %}">{{ student.id }}</a></p>
+  <p>Name: {{ student.name }}</p>
+    <p>Skill to learn: {{ student.skill_to_learn }}</p>
+    <a href="{% url 'mentoring:student_delete' student.id %}">Delete</a>
+    <br>
+    <a href="{% url 'mentoring:search_mentors' student.id %}">Search mentors</a>
+  </li>
+  {% endfor %}
+</ul>
+<br>
+
+
+{% endblock %}

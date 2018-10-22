@@ -12,9 +12,9 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='cart',
-            name='subtotal',
-            field=models.DecimalField(decimal_places=2, default=0.0, max_digits=100),
-        ),
+        # migrations.AddField(
+        #     model_name='cart',
+        #     name='subtotal',
+        #     field=models.DecimalField(decimal_places=2, default=0.0, max_digits=65),
+        # ),
     ]

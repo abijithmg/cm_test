@@ -1,0 +1,21 @@
+{% extends 'mentoring_base.html' %}
+
+{% block content %}
+Student: {{ student.name }} <br>
+Skills to learn: {{ student.skill_to_learn }}
+{% if mentors %}
+<h1 style="color:green"> Available Mentors List </h1>
+<ul>
+  {% for mentor in mentors %}
+  <li><p>Mentor ID: <a href="{% url 'mentoring:mentor_edit' mentor.id %}">{{ mentor.id }}</a></p>
+  <p>Name: {{ mentor.name }}</p>
+    <p>Expertise: {{ mentor.expertise }}</p>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<h1 style="color:red"> No mentors available for this skill</h1>
+{% endif %}
+
+<br>
+{% endblock %}

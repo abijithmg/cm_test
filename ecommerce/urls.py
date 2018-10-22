@@ -48,6 +48,8 @@ urlpatterns = [
     url(r'^register/$', RegisterView.as_view(), name='register'),
     url(r'^bootstrap/$', TemplateView.as_view(template_name='bootstrap/example.html')),
     url(r'^products/', include("products.urls", namespace='products')),
+    url(r'^mentoring/', include("mentoring.urls", namespace='mentoring')),
+
     url(r'^search/', include("search.urls", namespace='search')),
     url(r'^settings/email/$', MarketingPreferenceUpdateView.as_view(), name='marketing-pref'),
     url(r'^webhooks/mailchimp/$', MailchimpWebhookView.as_view(), name='webhooks-mailchimp'),

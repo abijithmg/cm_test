@@ -14,9 +14,9 @@ gunicorn==19.7.1
 idna==2.6
 jmespath==0.9.3
 olefile==0.44
-pillow==4.3.0
+#pillow==4.3.0
 pip==9.0.1
-psycopg2==2.7.3.1
+#psycopg2==2.7.3.1
 python-dateutil==2.6.1
 pytz==2017.2
 requests==2.18.4
@@ -27,3 +27,4 @@ smmap2==2.0.3
 stripe==1.68.0
 urllib3==1.22
 wheel==0.30.0
+mysqlclient

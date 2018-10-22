@@ -1,0 +1,6 @@
+{% block content %}
+<form method="post">{% csrf_token %}
+  Are you sure you want to delete "{{ student }}" ?
+  <input class="btn btn-primary" type="submit" value="Submit" />
+</form>
+{% endblock %}
