@@ -1,4 +1,4 @@
-Cloud Maya test
+C M test
 
 Documentation 
 - mkdir workspace
